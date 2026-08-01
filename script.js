@@ -1,5 +1,7 @@
-const openBtn = document.getElementById("openBtn");
+const btn = document.getElementById("openBtn");
 
-openBtn.addEventListener("click", () => {
-    alert("Welcome to our story, Keyy 🤍");
+btn.addEventListener("click", () => {
+    document.getElementById("story").scrollIntoView({
+        behavior: "smooth"
+    });
 });
