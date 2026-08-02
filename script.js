@@ -5,10 +5,6 @@ btn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
-    document.getElementById("story").scrollIntoView({
-        behavior: "smooth"
-    });
-});
 
 // Membuat love putih
 setInterval(() => {
@@ -27,22 +23,34 @@ setInterval(() => {
 
     setTimeout(() => {
         heart.remove();
-    },6000);
+    }, 6000);
 
-},800);
+}, 800);
+
 const startBtn = document.getElementById("startBtn");
 
 if (startBtn) {
+
     startBtn.addEventListener("click", () => {
 
-        document.getElementById("intro").style.opacity = "0";
+        const intro = document.getElementById("intro");
+        const main = document.getElementById("mainContent");
+
+        intro.style.opacity = "0";
+        intro.style.pointerEvents = "none";
 
         setTimeout(() => {
-            document.getElementById("intro").style.display = "none";
 
-            document.getElementById("mainContent").style.opacity = "1";
+            intro.style.display = "none";
+            main.style.opacity = "1";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
         }, 800);
 
     });
+
 }
