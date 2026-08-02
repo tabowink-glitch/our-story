@@ -5,6 +5,10 @@ btn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+    document.getElementById("story").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
 // Membuat love putih
 setInterval(() => {
