@@ -103,3 +103,6 @@ button:hover{
 #startBtn{
     margin-top: 20px;
 }
+#mainContent{
+    opacity: 0;
+}
