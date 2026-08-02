@@ -26,3 +26,19 @@ setInterval(() => {
     },6000);
 
 },800);
+const startBtn = document.getElementById("startBtn");
+
+if (startBtn) {
+    startBtn.addEventListener("click", () => {
+
+        document.getElementById("intro").style.opacity = "0";
+
+        setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+
+            document.getElementById("mainContent").style.opacity = "1";
+
+        }, 800);
+
+    });
+}
